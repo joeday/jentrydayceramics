@@ -1,11 +1,12 @@
-h1 {
+h1, 
+.title {
   font-size: 32px;
   line-height: 1.13;
-  margin: 30px 0 18px;
+  margin: 0;
 }
 
 a {
-  color:#fff;
+  color:#febb05;
   text-shadow: 0 0 0 rgba(56,56,56,0); 
 }
 
@@ -34,16 +35,19 @@ input[type=submit] {
 }
 
 .App {
-  text-align: left;
-  color: white;
+  text-align: center;
+  color: #febb05;
   display: flex;
+  flex-direction: column;
   height: 100%;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .landing-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 24px;
 }
 
@@ -58,6 +62,11 @@ input[type=submit] {
   flex: 1 1 auto;
 }
 
+.site-description {
+  font-size: 14px;
+  margin-top: 32px;
+}
+
 .site-footer {
   display: flex;
   font-size: 10px;
@@ -65,10 +74,12 @@ input[type=submit] {
   flex-wrap: wrap;
   justify-content: space-between ;
   align-items: center;
+  color: #704f24;
+  margin: 24px 0 56px;
 }
 
-.site-footer > * {
-  margin-bottom: 12px;
+.site-footer > a {
+  color: #704f24;
 }
 
 .streaming-links {
@@ -88,7 +99,7 @@ input[type=submit] {
 
 .divider {
   font-size: 32px;
-  margin: 0 0 26px;
+  margin: 0;
 }
 
 .revue-email-form {
@@ -116,27 +127,38 @@ input[type=submit] {
   display: none;
 }
 
+@media only screen and (min-width: 375px) {
+  h1, 
+  .title {
+    font-size: 42px;
+    line-height: 1.13;
+    margin: 0;
+  }
+
+  .divider {
+    font-size: 42px;
+  }
+
+  .site-footer {
+    margin: 48px 0 96px;
+  }
+  
+}
+
 @media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 64px;
-    margin: 60px 0 37px;
-  }
-
-  input[type=submit] {
-    font-size: 14px;
-    padding: 16px 12px 12px;
-  }
-
-  .landing-page {
-    padding: 56px 84px;
+  h1,
+  .title {
+    font-size: 48px;
   }
 
   .site-header {
     font-size: 24px;
   }
 
-  .site-content {
-    width: 74%;
+  .site-description {
+    margin-top: 64px;
+    font-size: 24px;
+    padding: 0 212px;
   }
 
   .site-footer {
@@ -144,7 +166,7 @@ input[type=submit] {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: unset;
+    /* margin-top: unset; */
   }
 
   .site-footer > * {
@@ -152,8 +174,8 @@ input[type=submit] {
   }
 
   .divider {
-    font-size: 64px;
-    margin: 0 0 26px;
+    font-size: 48px;
+    /* margin: 0 0 12px; */
   }
 
   .revue-form-field {
@@ -171,7 +193,42 @@ input[type=submit] {
 
   .site-content {
     font-size: 24px;
-    width: 50%;
+  }
+
+  .site-description {
+    padding: 0 320px;
+  }
+
+}
+
+@media only screen and (min-width: 1300px) {
+
+  .site-description {
+    padding: 0 448px;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .site-description {
+    padding: 0 548px;
+  }
+
+}
+
+@media only screen and (min-width: 1650px) {
+
+  .site-description {
+    padding: 0 648px;
+  }
+
+}
+
+@media only screen and (min-width: 1900px) {
+
+  .site-description {
+    padding: 0 748px;
   }
 
 }
